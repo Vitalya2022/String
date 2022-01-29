@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "String.h"
 using namespace std;
 int main()
 {
-    cout << "Hello world \n";
-    cout << "HGoodbye! \n";
+    
+    String s("Hello world");
+    char* str = s;
+    cout << str;
+
+    cout << (char*) s << ' ' << str;
+    int size = s;
 }
 
