@@ -8,10 +8,18 @@ int main()
 {
     
     String s("Hello world");
-    char* str = s;
-    cout << str;
+    /*char* str = s;
+    cout << str;*/
 
-    cout << (char*) s << ' ' << str;
-    int size = s;
+    cout << /*(char*) */s << ' ' << (int) s << '\n';
+    /*int size = s;*/
+
+    String t = move(s);
+    cout << t << '\n';
+    cout << "'" << s <<"'\n";
+    String z("123 apples");
+    z = move(t); // String -> String&&
+    cout << z << '\n';
+    cout << "'" << t << "'\n";
 }
 
